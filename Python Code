@@ -1,0 +1,43 @@
+## !!!!!!! MAKE SURE THE FIRST LETTER IS CAPTIAL WHEN YOU TYPE YOUR ANSWERS"
+# Ask user thier name
+name = input("What is your name: ")
+
+# If the name is similar to user input ask them question
+# (if not name == "Aisha":) is saying that if the name isn't Aisha then give else respond
+if name == "Aisha" or name == "Huma" or name == "Talha":
+   evil_status = input("Are you evil\n")
+   good_deeds = int(input("How many good deeds have you done today? \n"))
+   if evil_status == "Yes" and good_deeds < 6:  
+      print("You're not welcome here " + name + "\nGET OUT!")
+      exit()
+   if evil_status == "No" and good_deeds < 4:
+      print("Doesn't that make you evil? GO AWAY!!")
+      exit()
+   else:
+      print("Oh, so you're one of those good " + name + "!! Come in!")
+else:
+   print("Hello " + name + ", Thank you so much for coming in today!")
+
+# Ask User to pick somthing from the menu
+menu = "Latte," + " Cappuccino," + " Espresso, Frappuccino and IceCoffe"
+order = input(name + ", What would you like today?\nHere is what we are serving.\n"+ menu +"\n")
+price = 8
+quantity = input("How many would you like?\n")
+
+# Set the price for coffe
+if order == "Frappuccino":
+   price = 13
+elif order == "Latte":
+   price = 3
+elif order == "Cappuccino":
+   price = 5
+elif order == "Espresso":
+   price = 6
+elif order == "IceCoffe":
+   price = 2
+else:
+   print("sorry, we don't have that here.")
+
+total = price * int(quantity)
+print("Thank you. Yout total is: $" + str(total))
+print("Please Wait a few mintues " + name + ". We will have it ready for you in a moment!")
